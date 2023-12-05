@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+// 優先度付きキュー
 public class PriorityQueue {
     private List<QueueItem> queue;
 
@@ -20,11 +21,13 @@ public class PriorityQueue {
         }
     }
 
+    // 要素を追加する
     public void push(String item, int priority) {
         QueueItem queueItem = new QueueItem(item, priority);
         queue.add(queueItem);
     }
 
+    // 最高優先度の要素を取り出す
     public String pop() {
         if (queue.isEmpty()) {
             throw new NoSuchElementException("Queue is empty");
